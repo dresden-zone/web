@@ -1,0 +1,21 @@
+@import "theme";
+
+@include theme();
+
+@import "vars";
+
+.card {
+  background-color: $c-card;
+  border: calc(0.1 * $s-unit) solid $c-card-secondary;
+  padding: $s-padding;
+  border-radius: calc(0.4 * $s-unit);
+}
+
+aside {
+  background-color: $c-card;
+  border-right: calc(0.1 * $s-unit) solid $c-card-secondary;
+  padding: $s-padding;
+
+  display: flex;
+  gap: calc(1 * $s-unit);
+}

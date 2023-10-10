@@ -1,0 +1,42 @@
+@import "vars";
+
+:host {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  height: 100vh;
+
+  aside, aside nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside nav {
+    gap: calc(0.5 * $s-unit);
+
+    a {
+      padding: calc(0.5 * $s-unit) $s-unit;
+      transition: 150ms background-color ease-in-out;
+      color: $f-color;
+      text-decoration: none;
+      border-radius: calc(0.5 * $s-unit);
+
+      &.active {
+        background-color: $c-secondary;
+      }
+
+      &:hover {
+        background-color: $c-primary;
+      }
+
+    }
+  }
+
+  main {
+    height: 100%;
+    overflow-y: scroll;
+
+    div {
+      padding: calc(2 * $s-unit);
+    }
+  }
+}
