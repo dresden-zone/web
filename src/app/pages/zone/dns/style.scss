@@ -20,5 +20,12 @@
       font-size: $f-size-mono;
       border-top: calc(0.1 * $s-unit) solid $c-card-secondary;
     }
+
+    form {
+      padding: calc(0.5 * $s-unit);
+      display: flex;
+      width: 100%;
+      gap: $s-unit;
+    }
   }
 }

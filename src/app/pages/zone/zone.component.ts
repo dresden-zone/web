@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {switchMap} from "rxjs";
+import {share, switchMap} from "rxjs";
 import {ActivatedRoute} from "@angular/router";
 import {ZoneService} from "../../api/zone/zone.service";
 
@@ -10,13 +10,12 @@ import {ZoneService} from "../../api/zone/zone.service";
 })
 export class ZoneComponent {
 
-  protected readonly zone = this.route.params.pipe(
-    switchMap(({id}) => this.zoneService.getZone(id)),
-  );
-
   constructor(
     private readonly route: ActivatedRoute,
     private readonly zoneService: ZoneService,
   ) {
+    this.route.params.subscribe(({zoneId}) => {
+      this.zoneService.selectZone(zoneId);
+    })
   }
 }

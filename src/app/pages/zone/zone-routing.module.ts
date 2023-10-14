@@ -3,7 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {ZoneComponent} from './zone.component';
 
 const routes: Routes = [{
-  path: ':id',
+  path: '',
   component: ZoneComponent,
   children: [
     {path: '', pathMatch: 'full', redirectTo: 'dashboard'},

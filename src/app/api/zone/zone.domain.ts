@@ -18,14 +18,25 @@ export enum RecordType {
 export type ZoneRecord<T> = {
   type: T,
   record: RecordInner,
-  value: T extends RecordType.A
+  value: { id: string } & (T extends RecordType.A
     ? RecordA : T extends RecordType.AAAA
       ? RecordAaaa : T extends RecordType.CNAME
         ? RecordCname : T extends RecordType.MX
           ? RecordMx : T extends RecordType.NS
             ? RecordNs : T extends RecordType.TXT
-              ? RecordTxt : unknown
+              ? RecordTxt : unknown)
 }
+
+export type CreateRecord<T> = {
+  name: string;
+  ttl: number;
+} & (T extends RecordType.A
+  ? RecordA : T extends RecordType.AAAA
+    ? RecordAaaa : T extends RecordType.CNAME
+      ? RecordCname : T extends RecordType.MX
+        ? RecordMx : T extends RecordType.NS
+          ? RecordNs : T extends RecordType.TXT
+            ? RecordTxt : unknown);
 
 export interface RecordInner {
   id: string;
@@ -37,32 +48,26 @@ export interface RecordInner {
 }
 
 export interface RecordA {
-  id: string;
   address: string;
 }
 
 export interface RecordAaaa {
-  id: string;
   address: string;
 }
 
 export interface RecordCname {
-  id: string;
   target: string;
 }
 
 export interface RecordMx {
-  id: string;
   preference: number;
   exchange: string;
 }
 
 export interface RecordNs {
-  id: string;
   target: string;
 }
 
 export interface RecordTxt {
-  id: string;
   content: string;
 }

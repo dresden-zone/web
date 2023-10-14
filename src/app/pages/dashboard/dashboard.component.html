@@ -3,7 +3,7 @@
   <div class="card">
     <h2>Zones</h2>
     <ul>
-      <li *ngFor="let zone of zones | async"><a [routerLink]="'zone/'+zone.id">{{zone.name}}</a></li>
+      <li *ngFor="let zone of zones | async"><a [routerLink]="zone.id">{{zone.name}}</a></li>
     </ul>
   </div>
 </div>

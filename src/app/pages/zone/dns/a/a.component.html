@@ -8,9 +8,37 @@
   </thead>
   <tbody>
   <tr *ngFor="let record of records">
-    <td>{{record.record.name}}</td>
-    <td>{{record.value.address}}</td>
-    <td>{{record.record.ttl}}</td>
+    <td colspan="4" *ngIf="(edit | async) === record.record.id; else row">
+      <form [formGroup]="editForm">
+        <feel-text-field label="Name" formControlName="name"/>
+        <feel-text-field label="Address" formControlName="address"/>
+        <feel-text-field label="TTL" formControlName="ttl" type="number"/>
+        <feel-button label="Save" flavor="good" (click)="save()" [disabled]="!editForm.valid"/>
+        <feel-button label="Cancel" flavor="danger" (click)="edit.next(null)"/>
+        <feel-button label="Delete" flavor="danger" (click)="delete()"/>
+      </form>
+    </td>
+
+    <ng-template #row>
+      <td>{{record.record.name}}</td>
+      <td>{{record.value.address}}</td>
+      <td>{{record.record.ttl}}</td>
+      <td>
+        <feel-button label="Edit" (click)="edit.next(record.record.id)"></feel-button>
+      </td>
+    </ng-template>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <form [formGroup]="addForm">
+        <feel-text-field label="Name" formControlName="name"/>
+        <feel-text-field label="Address" formControlName="address"/>
+        <feel-text-field label="TTL" formControlName="ttl" type="number"/>
+        <feel-button label="Add" flavor="good" [disabled]="!addForm.valid" (click)="add()">
+          <app-icon-add/>
+        </feel-button>
+      </form>
+    </td>
   </tr>
   </tbody>
 </table>

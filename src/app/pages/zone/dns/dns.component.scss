@@ -15,15 +15,7 @@
     display: flex;
     border-bottom: calc(0.1 * $s-unit) solid $c-card-secondary;
     padding: 0.4rem;
-    justify-content: space-between;
-
-    &, .tabs {
-      gap: 0.4rem;
-    }
-
-    .tabs {
-      display: flex;
-    }
+    gap: 0.4rem;
   }
 
   .body {
