@@ -10,6 +10,7 @@ const routes: Routes = [{
     {path: 'a', loadComponent: () => import("./a/a.component").then(c => c.AComponent)},
     {path: 'aaaa', loadComponent: () => import("./aaaa/aaaa.component").then(c => c.AaaaComponent)},
     {path: 'cname', loadComponent: () => import("./cname/cname.component").then(c => c.CnameComponent)},
+    {path: 'mx', loadComponent: () => import("./mx/mx.component").then(c => c.MxComponent)},
     {path: 'txt', loadComponent: () => import("./txt/txt.component").then(c => c.TxtComponent)}
   ]
 }];

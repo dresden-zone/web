@@ -1,0 +1,22 @@
+<table *ngIf="records | async as records; else loading">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Preference</th>
+    <th>Exchange</th>
+    <th>TLL</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let record of records">
+    <td>{{record.record.name}}</td>
+    <td>{{record.value.preference}}</td>
+    <td>{{record.value.exchange}}</td>
+    <td>{{record.record.ttl}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<ng-template #loading>
+  Loading...
+</ng-template>
