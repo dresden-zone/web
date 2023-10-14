@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 
 import { ZoneRoutingModule } from './zone-routing.module';
 import { ZoneComponent } from './zone.component';
+import {IconGearComponent} from "../../core/icons/icon-gear/icon-gear.component";
+import {IconDashboardComponent} from "../../core/icons/icon-dashboard/icon-dashboard.component";
+import {IconListComponent} from "../../core/icons/icon-list/icon-list.component";
 
 
 @NgModule({
@@ -11,7 +14,10 @@ import { ZoneComponent } from './zone.component';
   ],
   imports: [
     CommonModule,
-    ZoneRoutingModule
+    ZoneRoutingModule,
+    IconGearComponent,
+    IconDashboardComponent,
+    IconListComponent
   ]
 })
 export class ZoneModule { }

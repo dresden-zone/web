@@ -1,9 +1,18 @@
 <aside>
   <h1><a routerLink="/">&lt;</a>{{(zone|async)?.name}}</h1>
   <nav>
-    <a routerLink="dashboard" routerLinkActive="active">Dashboard</a>
-    <a routerLink="dns" routerLinkActive="active">DNS</a>
-    <a routerLink="settings" routerLinkActive="active">Settings</a>
+    <a routerLink="dashboard" routerLinkActive="active">
+      <app-icon-dashboard class="icon"/>
+      Dashboard
+    </a>
+    <a routerLink="dns" routerLinkActive="active">
+      <app-icon-list class="icon"/>
+      DNS
+    </a>
+    <a routerLink="settings" routerLinkActive="active">
+      <app-icon-gear class="icon"/>
+      Settings
+    </a>
   </nav>
 </aside>
 <main>

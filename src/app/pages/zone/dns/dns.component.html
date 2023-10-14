@@ -1,14 +1,18 @@
 <h1>DNS</h1>
 
-<div class="card typography">
+<div class="tab-view">
   <nav>
-    <a routerLink="a">A</a>
-    |
-    <a routerLink="aaaa">AAAA</a>
-    |
-    <a routerLink="cname">CNAME</a>
-    |
-    <a routerLink="txt">TXT</a>
+    <div class="tabs">
+      <feel-button link="a" [highlightActiveLink]="true" label="A"/>
+      <feel-button link="aaaa" [highlightActiveLink]="true" label="AAAA"/>
+      <feel-button link="cname" [highlightActiveLink]="true" label="CNAME"/>
+      <feel-button link="txt" [highlightActiveLink]="true" label="TXT"/>
+    </div>
+    <feel-button class="add" label="Add">
+      <app-icon-add/>
+    </feel-button>
   </nav>
-  <router-outlet></router-outlet>
+  <div class="body">
+    <router-outlet></router-outlet>
+  </div>
 </div>

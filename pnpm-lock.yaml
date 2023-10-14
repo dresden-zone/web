@@ -29,9 +29,15 @@ dependencies:
   '@angular/router':
     specifier: ^16.2.0
     version: 16.2.8(@angular/common@16.2.8)(@angular/core@16.2.8)(@angular/platform-browser@16.2.8)(rxjs@7.8.1)
+  '@feel/form':
+    specifier: ^0.0.9
+    version: 0.0.9(@angular/cdk@16.2.8)(@angular/common@16.2.8)(@angular/core@16.2.8)(@feel/style@0.0.9)
   '@feel/style':
-    specifier: ^0.0.5
-    version: 0.0.5(@angular/common@16.2.8)(@angular/core@16.2.8)
+    specifier: ^0.0.9
+    version: 0.0.9(@angular/common@16.2.8)(@angular/core@16.2.8)
+  '@fontsource/dm-mono':
+    specifier: ^5.0.15
+    version: 5.0.15
   '@fontsource/dm-sans':
     specifier: ^5.0.15
     version: 5.0.15
@@ -277,6 +283,21 @@ packages:
     dependencies:
       '@angular/core': 16.2.8(rxjs@7.8.1)(zone.js@0.13.3)
       tslib: 2.6.2
+    dev: false
+
+  /@angular/cdk@16.2.8(@angular/common@16.2.8)(@angular/core@16.2.8)(rxjs@7.8.1):
+    resolution: {integrity: sha512-DvqxH909mgSSxWbc5xM5xKLjDMPXY3pzzSVAllngvc9KGPFw240WCs3tSpPaVJI50Esbzdu5O0CyTBfu9jUy4g==}
+    peerDependencies:
+      '@angular/common': ^16.0.0 || ^17.0.0
+      '@angular/core': ^16.0.0 || ^17.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': 16.2.8(@angular/core@16.2.8)(rxjs@7.8.1)
+      '@angular/core': 16.2.8(rxjs@7.8.1)(zone.js@0.13.3)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    optionalDependencies:
+      parse5: 7.1.2
     dev: false
 
   /@angular/cli@16.2.5:
@@ -1933,8 +1954,23 @@ packages:
     dev: true
     optional: true
 
-  /@feel/style@0.0.5(@angular/common@16.2.8)(@angular/core@16.2.8):
-    resolution: {integrity: sha512-mxlTnuCc0pgoyseNSkGOisley/qB0tfeFG2voNX41dGFuSQOpXA9efUX5APIN63ursdupv7g0h8Hy1sM33KSfQ==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fstyle/-/0.0.5/style-0.0.5.tgz}
+  /@feel/form@0.0.9(@angular/cdk@16.2.8)(@angular/common@16.2.8)(@angular/core@16.2.8)(@feel/style@0.0.9):
+    resolution: {integrity: sha512-rBSFKOPGulfG28sdfAgaQqvo2iN+DN8R5s3eliFFeKucEhThlbAVRW+9Bf87zc6j5ho4Cjq2xnt6xmJMokQQPQ==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fform/-/0.0.9/form-0.0.9.tgz}
+    peerDependencies:
+      '@angular/cdk': ^16.0.0
+      '@angular/common': ^16.0.0
+      '@angular/core': ^16.0.0
+      '@feel/style': 0.0.9
+    dependencies:
+      '@angular/cdk': 16.2.8(@angular/common@16.2.8)(@angular/core@16.2.8)(rxjs@7.8.1)
+      '@angular/common': 16.2.8(@angular/core@16.2.8)(rxjs@7.8.1)
+      '@angular/core': 16.2.8(rxjs@7.8.1)(zone.js@0.13.3)
+      '@feel/style': 0.0.9(@angular/common@16.2.8)(@angular/core@16.2.8)
+      tslib: 2.6.2
+    dev: false
+
+  /@feel/style@0.0.9(@angular/common@16.2.8)(@angular/core@16.2.8):
+    resolution: {integrity: sha512-gk0Ac/II8iMKFoZIvAcgg1W1nS1rQkq9LU4sSIF5XoS6fegGda1RNCUw2a3t8MdKQ5M2P4ZpswGWVKY7BHooVg==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fstyle/-/0.0.9/style-0.0.9.tgz}
     peerDependencies:
       '@angular/common': ^16.0.0
       '@angular/core': ^16.0.0
@@ -1942,6 +1978,10 @@ packages:
       '@angular/common': 16.2.8(@angular/core@16.2.8)(rxjs@7.8.1)
       '@angular/core': 16.2.8(rxjs@7.8.1)(zone.js@0.13.3)
       tslib: 2.6.2
+    dev: false
+
+  /@fontsource/dm-mono@5.0.15:
+    resolution: {integrity: sha512-XDUdVTd1Z9NALTJPlGUV9LrkV5Xz+vPorcq3RK1IKGgjn8bMXW1RHZDXBHhP+qko1iZ8qrCubRTVqvAXPUIlRQ==}
     dev: false
 
   /@fontsource/dm-sans@5.0.15:
@@ -3563,7 +3603,6 @@ packages:
   /entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
-    dev: true
 
   /env-paths@2.2.1:
     resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
@@ -5587,7 +5626,6 @@ packages:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
     dependencies:
       entities: 4.5.0
-    dev: true
 
   /parseurl@1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}

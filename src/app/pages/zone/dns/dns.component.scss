@@ -5,3 +5,28 @@
   flex-direction: column;
   gap: $s-unit;
 }
+
+.tab-view {
+  background-color: $c-card;
+  border: calc(0.1 * $s-unit) solid $c-card-secondary;
+  border-radius: calc(0.5 * $s-unit);
+
+  nav {
+    display: flex;
+    border-bottom: calc(0.1 * $s-unit) solid $c-card-secondary;
+    padding: 0.4rem;
+    justify-content: space-between;
+
+    &, .tabs {
+      gap: 0.4rem;
+    }
+
+    .tabs {
+      display: flex;
+    }
+  }
+
+  .body {
+    padding: $s-padding;
+  }
+}

@@ -1,26 +1,20 @@
-<table>
+<table *ngIf="records | async as records; else loading">
   <thead>
   <tr>
     <th>Name</th>
-    <th>Content</th>
+    <th>Target</th>
     <th>TLL</th>
   </tr>
   </thead>
   <tbody>
-  <tr>
-    <td>@</td>
-    <td>idk</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>www</td>
-    <td>Lore IPsum</td>
-    <td>300</td>
-  </tr>
-  <tr>
-    <td>wg</td>
-    <td>Hallo</td>
-    <td>300</td>
+  <tr *ngFor="let record of records">
+    <td>{{record.record.name}}</td>
+    <td>{{record.value.content}}</td>
+    <td>{{record.record.ttl}}</td>
   </tr>
   </tbody>
 </table>
+
+<ng-template #loading>
+  Loading...
+</ng-template>

@@ -1,0 +1,24 @@
+@import "vars";
+
+:host {
+  display: block;
+  width: 100%;
+
+  table {
+    width: 100%;
+
+    thead tr th {
+      text-align: left;
+    }
+
+    th, td {
+      padding: calc(0.5 * $s-unit);
+    }
+
+    tbody tr td {
+      font-family: $f-family-mono;
+      font-size: $f-size-mono;
+      border-top: calc(0.1 * $s-unit) solid $c-card-secondary;
+    }
+  }
+}

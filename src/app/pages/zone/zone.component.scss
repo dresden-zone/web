@@ -15,19 +15,30 @@
 
     a {
       padding: calc(0.5 * $s-unit) $s-unit;
-      transition: 150ms background-color ease-in-out;
+      transition: 150ms background-color ease-in-out, 150ms color ease-in-out;
       color: $f-color;
       text-decoration: none;
       border-radius: calc(0.5 * $s-unit);
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
 
-      &.active {
-        background-color: $c-secondary;
+      &:hover, &.active {
+        color: $c-secondary;
+
+        .icon ::ng-deep svg {
+          fill: $c-secondary;
+          transition: 150ms fill ease-in-out;
+        }
       }
 
       &:hover {
         background-color: $c-primary;
       }
 
+      &.active {
+        background-color: $c-primary-d;
+      }
     }
   }
 
