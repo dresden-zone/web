@@ -1,9 +1,10 @@
 @import "theme";
 
 @include theme(
-  $c-primary: lighten(#FFC300 , 10%),
-  $c-primary-l: #FFC300 ,
+  $c-primary: lighten(#FFC300, 10%),
+  $c-primary-l: #FFC300,
   $c-primary-d: #ffb822,
+  $c-gray: #808080,
 );
 
 @import "vars";

@@ -11,6 +11,10 @@ import {CnameComponent} from "./cname/cname.component";
 import {MxComponent} from "./mx/mx.component";
 import {TxtComponent} from "./txt/txt.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import {IconTrashComponent} from "../../../core/icons/icon-trash/icon-trash.component";
+import {IconPenComponent} from "../../../core/icons/icon-pen/icon-pen.component";
+import {IconSaveComponent} from "../../../core/icons/icon-save/icon-save.component";
+import {IconCloseComponent} from "../../../core/icons/icon-close/icon-close.component";
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import {ReactiveFormsModule} from "@angular/forms";
     ButtonComponent,
     IconAddComponent,
     ReactiveFormsModule,
-    TextFieldComponent
+    TextFieldComponent,
+    IconTrashComponent,
+    IconPenComponent,
+    IconSaveComponent,
+    IconCloseComponent
   ]
 })
 export class DnsModule {
