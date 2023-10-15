@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^16.2.9",
     "@angular/router": "^16.2.9",
     "@feel/form": "^0.0.9",
+    "@feel/notification": "^0.0.9",
     "@feel/style": "^0.0.9",
     "@fontsource/dm-mono": "^5.0.15",
     "@fontsource/dm-sans": "^5.0.15",

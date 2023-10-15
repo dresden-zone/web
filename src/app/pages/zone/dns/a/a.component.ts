@@ -3,6 +3,7 @@ import {ZoneService} from "../../../../api/zone/zone.service";
 import {BehaviorSubject, filter, map, Subscription, switchMap} from "rxjs";
 import {RecordType} from "../../../../api/zone/zone.domain";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {NotificationService} from "@feel/notification";
 
 @Component({
   selector: 'app-a',
@@ -30,6 +31,7 @@ export class AComponent implements OnInit, OnDestroy {
 
   constructor(
     private readonly zoneService: ZoneService,
+    private readonly notificationService: NotificationService,
   ) {
   }
 
@@ -68,11 +70,18 @@ export class AComponent implements OnInit, OnDestroy {
       ttl: value.ttl!,
     }).subscribe(record => {
       this.edit.next(null);
+      this.notificationService.success(`Record \`${value.name}\` was successfully updated.`)
     });
   }
 
   delete() {
-    this.zoneService.deleteRecord(this.edit.value!, RecordType.A).subscribe();
+    const id = this.edit.value!;
+    this.records.pipe(
+      map(records => records.find(record => record.record.id === id)),
+      filter(record => !!record),
+      map(record => record!),
+      switchMap(record => this.zoneService.deleteRecord(id, RecordType.A).pipe(map(() => record)))
+    ).subscribe(record => this.notificationService.success(`Record \`${record.record.name}\` was successfully deleted.`));
   }
 
   add() {
@@ -86,6 +95,9 @@ export class AComponent implements OnInit, OnDestroy {
       name: value.name!,
       address: value.address!,
       ttl: value.ttl!,
-    }).subscribe(() => this.addForm.reset({ttl: 500}));
+    }).subscribe(() => {
+      this.addForm.reset({ttl: 500});
+      this.notificationService.success(`Record \`${value.name}\` was successfully created.`);
+    });
   }
 }

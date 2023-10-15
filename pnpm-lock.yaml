@@ -32,6 +32,9 @@ dependencies:
   '@feel/form':
     specifier: ^0.0.9
     version: 0.0.9(@angular/cdk@16.2.8)(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.9)
+  '@feel/notification':
+    specifier: ^0.0.9
+    version: 0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.9)
   '@feel/style':
     specifier: ^0.0.9
     version: 0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)
@@ -2129,6 +2132,19 @@ packages:
       '@feel/style': 0.0.9
     dependencies:
       '@angular/cdk': 16.2.8(@angular/common@16.2.9)(@angular/core@16.2.9)(rxjs@7.8.1)
+      '@angular/common': 16.2.9(@angular/core@16.2.9)(rxjs@7.8.1)
+      '@angular/core': 16.2.9(rxjs@7.8.1)(zone.js@0.13.3)
+      '@feel/style': 0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)
+      tslib: 2.6.2
+    dev: false
+
+  /@feel/notification@0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.9):
+    resolution: {integrity: sha512-+4RviXIMQtw9JYpljjsf6gh4MCu/M0Eqq+ah31t1jFa7wvU6LeP/RXiSmTTQkVMB9zwpD+YFFureSZAhPBdM4A==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fnotification/-/0.0.9/notification-0.0.9.tgz}
+    peerDependencies:
+      '@angular/common': ^16.0.0
+      '@angular/core': ^16.0.0
+      '@feel/style': 0.0.9
+    dependencies:
       '@angular/common': 16.2.9(@angular/core@16.2.9)(rxjs@7.8.1)
       '@angular/core': 16.2.9(rxjs@7.8.1)(zone.js@0.13.3)
       '@feel/style': 0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)
