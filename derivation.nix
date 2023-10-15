@@ -20,10 +20,8 @@ mkYarnPackage {
     '';
 
     installPhase = ''
-      mkdir -p $out/bin/en
-      mkdir -p $out/bin/de
-      cp -r ./deps/waiter/dist/en-US/* $out/bin/en/
-      cp -r ./deps/waiter/dist/de-DE/* $out/bin/de/
+      mkdir -p $out/dist
+      cp -r ./deps/waiter/dist/* $out/dist/
     '';
 
     doDist = false;
