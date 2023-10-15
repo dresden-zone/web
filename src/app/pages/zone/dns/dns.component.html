@@ -8,7 +8,8 @@
       <feel-button link="mx" [highlightActiveLink]="true" label="MX"/>
       <feel-button link="txt" [highlightActiveLink]="true" label="TXT"/>
   </nav>
-  <div class="body">
-    <router-outlet></router-outlet>
+  <div class="body" [@routing]="outlet.isActivated ? outlet.activatedRoute : ''">
+    <router-outlet #outlet="outlet"/>
   </div>
+
 </div>
