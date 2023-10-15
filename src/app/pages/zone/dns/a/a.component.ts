@@ -68,7 +68,7 @@ export class AComponent implements OnInit, OnDestroy {
       name: value.name!,
       address: value.address!,
       ttl: value.ttl!,
-    }).subscribe(record => {
+    }).subscribe(() => {
       this.edit.next(null);
       this.notificationService.success(`Record \`${value.name}\` was successfully updated.`)
     });

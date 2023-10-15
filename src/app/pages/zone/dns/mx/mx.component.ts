@@ -1,7 +1,5 @@
 import {Component} from '@angular/core';
 import {ZoneService} from "../../../../api/zone/zone.service";
-import {share} from "rxjs";
-import {ActivatedRoute} from "@angular/router";
 import {RecordType} from "../../../../api/zone/zone.domain";
 
 @Component({

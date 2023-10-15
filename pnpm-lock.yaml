@@ -30,14 +30,14 @@ dependencies:
     specifier: ^16.2.9
     version: 16.2.9(@angular/common@16.2.9)(@angular/core@16.2.9)(@angular/platform-browser@16.2.9)(rxjs@7.8.1)
   '@feel/form':
-    specifier: ^0.0.9
-    version: 0.0.9(@angular/cdk@16.2.8)(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.9)
+    specifier: ^0.0.12
+    version: 0.0.12(@angular/cdk@16.2.8)(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.12)
   '@feel/notification':
-    specifier: ^0.0.9
-    version: 0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.9)
+    specifier: ^0.0.12
+    version: 0.0.12(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.12)
   '@feel/style':
-    specifier: ^0.0.9
-    version: 0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)
+    specifier: ^0.0.12
+    version: 0.0.12(@angular/common@16.2.9)(@angular/core@16.2.9)
   '@fontsource/dm-mono':
     specifier: ^5.0.15
     version: 5.0.15
@@ -2123,36 +2123,36 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@feel/form@0.0.9(@angular/cdk@16.2.8)(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.9):
-    resolution: {integrity: sha512-rBSFKOPGulfG28sdfAgaQqvo2iN+DN8R5s3eliFFeKucEhThlbAVRW+9Bf87zc6j5ho4Cjq2xnt6xmJMokQQPQ==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fform/-/0.0.9/form-0.0.9.tgz}
+  /@feel/form@0.0.12(@angular/cdk@16.2.8)(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.12):
+    resolution: {integrity: sha512-NcFdsDkXQakc4l2j+CdbDf2wo5IaLvORt0BZn1C2cQLjNTBuXEXYfX6KmlQzocGvoETizq2m7aNQm1Bog8TkBg==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fform/-/0.0.12/form-0.0.12.tgz}
     peerDependencies:
       '@angular/cdk': ^16.0.0
       '@angular/common': ^16.0.0
       '@angular/core': ^16.0.0
-      '@feel/style': 0.0.9
+      '@feel/style': 0.0.12
     dependencies:
       '@angular/cdk': 16.2.8(@angular/common@16.2.9)(@angular/core@16.2.9)(rxjs@7.8.1)
       '@angular/common': 16.2.9(@angular/core@16.2.9)(rxjs@7.8.1)
       '@angular/core': 16.2.9(rxjs@7.8.1)(zone.js@0.13.3)
-      '@feel/style': 0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)
+      '@feel/style': 0.0.12(@angular/common@16.2.9)(@angular/core@16.2.9)
       tslib: 2.6.2
     dev: false
 
-  /@feel/notification@0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.9):
-    resolution: {integrity: sha512-+4RviXIMQtw9JYpljjsf6gh4MCu/M0Eqq+ah31t1jFa7wvU6LeP/RXiSmTTQkVMB9zwpD+YFFureSZAhPBdM4A==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fnotification/-/0.0.9/notification-0.0.9.tgz}
+  /@feel/notification@0.0.12(@angular/common@16.2.9)(@angular/core@16.2.9)(@feel/style@0.0.12):
+    resolution: {integrity: sha512-ZfQWM1BewnRECwoLTEdK3VozahwboerWqqHZgkMB7ASBxtaVmh/RevnYkPbkva8uzFLWc0jdTvikFg8m9NVo0w==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fnotification/-/0.0.12/notification-0.0.12.tgz}
     peerDependencies:
       '@angular/common': ^16.0.0
       '@angular/core': ^16.0.0
-      '@feel/style': 0.0.9
+      '@feel/style': 0.0.12
     dependencies:
       '@angular/common': 16.2.9(@angular/core@16.2.9)(rxjs@7.8.1)
       '@angular/core': 16.2.9(rxjs@7.8.1)(zone.js@0.13.3)
-      '@feel/style': 0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9)
+      '@feel/style': 0.0.12(@angular/common@16.2.9)(@angular/core@16.2.9)
       tslib: 2.6.2
     dev: false
 
-  /@feel/style@0.0.9(@angular/common@16.2.9)(@angular/core@16.2.9):
-    resolution: {integrity: sha512-gk0Ac/II8iMKFoZIvAcgg1W1nS1rQkq9LU4sSIF5XoS6fegGda1RNCUw2a3t8MdKQ5M2P4ZpswGWVKY7BHooVg==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fstyle/-/0.0.9/style-0.0.9.tgz}
+  /@feel/style@0.0.12(@angular/common@16.2.9)(@angular/core@16.2.9):
+    resolution: {integrity: sha512-PES+iUK9EAPrZtIimC4UsZWr2tA1P1VpDNRhKy4Z8i96V7HH+0123Q90/pJDU2BCQnJclNN00VuLgSJjbZqn/Q==, tarball: https://git.offsetting.dev/api/packages/offsetting/npm/%40feel%2Fstyle/-/0.0.12/style-0.0.12.tgz}
     peerDependencies:
       '@angular/common': ^16.0.0
       '@angular/core': ^16.0.0
@@ -6413,8 +6413,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /object-inspect@1.12.3:
-    resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==}
+  /object-inspect@1.13.0:
+    resolution: {integrity: sha512-HQ4J+ic8hKrgIt3mqk6cVOVrW2ozL4KdvHlqpBv9vDYWx9ysAgENAdvy4FoGF+KFdhR7nQTNm5J0ctAeOwn+3g==}
     dev: true
 
   /object-path@0.11.8:
@@ -7325,7 +7325,7 @@ packages:
     dependencies:
       call-bind: 1.0.2
       get-intrinsic: 1.2.1
-      object-inspect: 1.12.3
+      object-inspect: 1.13.0
     dev: true
 
   /signal-exit@3.0.7:

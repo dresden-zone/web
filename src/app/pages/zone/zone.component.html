@@ -1,18 +1,15 @@
 <aside>
   <h1><a routerLink="/">Back</a></h1>
   <nav>
-    <a routerLink="dashboard" routerLinkActive="active">
-      <app-icon-dashboard class="icon"/>
-      Dashboard
-    </a>
-    <a routerLink="dns" routerLinkActive="active">
+    <feel-button link="dashboard" [center]="false" [highlightActiveLink]="true" label="Dashboard">
+      <app-icon-dashboard/>
+    </feel-button>
+    <feel-button link="dns" [center]="false" [highlightActiveLink]="true" label="DNS">
       <app-icon-list class="icon"/>
-      DNS
-    </a>
-    <a routerLink="settings" routerLinkActive="active">
+    </feel-button>
+    <feel-button link="settings" [center]="false" [highlightActiveLink]="true" label="Settings">
       <app-icon-gear class="icon"/>
-      Settings
-    </a>
+    </feel-button>
   </nav>
 </aside>
 <main>

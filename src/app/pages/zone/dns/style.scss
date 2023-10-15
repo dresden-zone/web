@@ -6,6 +6,8 @@
 
   table {
     width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
 
     thead tr th {
       text-align: left;
@@ -16,16 +18,27 @@
     }
 
     tbody tr td {
-      font-family: $f-family-mono;
-      font-size: $f-size-mono;
       border-top: calc(0.1 * $s-unit) solid $c-card-secondary;
+
+      &:last-child {
+        width: 0.1%;
+      }
     }
 
     form {
       padding: calc(0.5 * $s-unit);
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr auto;
       width: 100%;
-      gap: $s-unit;
+
+      &, .actions {
+        gap: $s-unit;
+      }
+
+      .actions {
+        display: flex;
+        align-items: flex-end;
+      }
     }
   }
 }

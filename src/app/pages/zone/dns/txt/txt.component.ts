@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {share} from "rxjs";
 import {RecordType} from "../../../../api/zone/zone.domain";
 import {ZoneService} from "../../../../api/zone/zone.service";
 
