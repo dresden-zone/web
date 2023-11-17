@@ -11,14 +11,14 @@ import {ButtonComponent} from "@feel/form";
   declarations: [
     ZoneComponent
   ],
-    imports: [
-        CommonModule,
-        ZoneRoutingModule,
-        IconGearComponent,
-        IconDashboardComponent,
-        IconListComponent,
-        ButtonComponent
-    ]
+  imports: [
+    CommonModule,
+    ZoneRoutingModule,
+    IconGearComponent,
+    IconDashboardComponent,
+    IconListComponent,
+    ButtonComponent
+  ]
 })
 export class ZoneModule {
 }

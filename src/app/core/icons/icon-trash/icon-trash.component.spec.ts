@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { IconTrashComponent } from './icon-trash.component';
+import {IconTrashComponent} from './icon-trash.component';
 
 describe('IconTrashComponent', () => {
   let component: IconTrashComponent;

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { IconCloseComponent } from './icon-close.component';
+import {IconCloseComponent} from './icon-close.component';
 
 describe('IconCloseComponent', () => {
   let component: IconCloseComponent;

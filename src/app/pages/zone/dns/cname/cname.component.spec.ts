@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CnameComponent } from './cname.component';
+import {CnameComponent} from './cname.component';
 
 describe('CnameComponent', () => {
   let component: CnameComponent;

@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DnsComponent } from './dns.component';
+import {DnsComponent} from './dns.component';
 
 describe('DnsComponent', () => {
   let component: DnsComponent;

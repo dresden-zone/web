@@ -1,5 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MxComponent } from './mx.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {MxComponent} from './mx.component';
 
 describe('AComponent', () => {
   let component: MxComponent;

@@ -2,13 +2,13 @@
 
 <div class="tab-view">
   <nav>
-      <feel-button link="a" [highlightActiveLink]="true" label="A"/>
-      <feel-button link="aaaa" [highlightActiveLink]="true" label="AAAA"/>
-      <feel-button link="cname" [highlightActiveLink]="true" label="CNAME"/>
-      <feel-button link="mx" [highlightActiveLink]="true" label="MX"/>
-      <feel-button link="txt" [highlightActiveLink]="true" label="TXT"/>
+    <feel-button [highlightActiveLink]="true" label="A" link="a"/>
+    <feel-button [highlightActiveLink]="true" label="AAAA" link="aaaa"/>
+    <feel-button [highlightActiveLink]="true" label="CNAME" link="cname"/>
+    <feel-button [highlightActiveLink]="true" label="MX" link="mx"/>
+    <feel-button [highlightActiveLink]="true" label="TXT" link="txt"/>
   </nav>
-  <div class="body" [@routing]="outlet.isActivated ? outlet.activatedRoute : ''">
+  <div [@routing]="outlet.isActivated ? outlet.activatedRoute : ''" class="body">
     <router-outlet #outlet="outlet"/>
   </div>
 

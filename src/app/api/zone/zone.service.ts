@@ -89,7 +89,7 @@ export class ZoneService {
         const list = records.get(type);
         const existing = list?.find(record => record.record.id === id);
         for (const key in record) {
-          // @ts-expect-error
+          // @ts-expect-error typings
           existing[key] = record[key];
         }
         this.records.next(records);

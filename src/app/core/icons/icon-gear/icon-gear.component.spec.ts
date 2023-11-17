@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { IconGearComponent } from './icon-gear.component';
+import {IconGearComponent} from './icon-gear.component';
 
 describe('IconGearComponent', () => {
   let component: IconGearComponent;

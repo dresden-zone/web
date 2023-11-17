@@ -57,23 +57,6 @@ export class TxtComponent implements OnInit, OnDestroy {
     this.subscription?.unsubscribe();
   }
 
-  protected save(): void {
-    if (!this.editForm.valid) {
-      return;
-    }
-
-    const value = this.editForm.value;
-
-    this.zoneService.updateRecord(this.edit.value!, RecordType.TXT, {
-      name: value.name!,
-      content: value.content!,
-      ttl: value.ttl!,
-    }).subscribe(() => {
-      this.edit.next(null);
-      this.notificationService.success(`Record \`${value.name}\` was successfully updated.`)
-    });
-  }
-
   delete() {
     const id = this.edit.value!;
     this.records.pipe(
@@ -98,6 +81,23 @@ export class TxtComponent implements OnInit, OnDestroy {
     }).subscribe(() => {
       this.addForm.reset({ttl: 500});
       this.notificationService.success(`Record \`${value.name}\` was successfully created.`);
+    });
+  }
+
+  protected save(): void {
+    if (!this.editForm.valid) {
+      return;
+    }
+
+    const value = this.editForm.value;
+
+    this.zoneService.updateRecord(this.edit.value!, RecordType.TXT, {
+      name: value.name!,
+      content: value.content!,
+      ttl: value.ttl!,
+    }).subscribe(() => {
+      this.edit.next(null);
+      this.notificationService.success(`Record \`${value.name}\` was successfully updated.`)
     });
   }
 }

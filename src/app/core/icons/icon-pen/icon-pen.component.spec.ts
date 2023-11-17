@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { IconPenComponent } from './icon-pen.component';
+import {IconPenComponent} from './icon-pen.component';
 
 describe('IconPenComponent', () => {
   let component: IconPenComponent;

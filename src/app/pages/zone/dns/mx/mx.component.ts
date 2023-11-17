@@ -10,7 +10,7 @@ import {NotificationService} from "@feel/notification";
   templateUrl: './mx.component.html',
   styleUrls: ['../style.scss']
 })
-export class MxComponent  implements OnInit, OnDestroy {
+export class MxComponent implements OnInit, OnDestroy {
 
   protected readonly records = this.zoneService.getRecords(RecordType.MX);
 
@@ -60,24 +60,6 @@ export class MxComponent  implements OnInit, OnDestroy {
     this.subscription?.unsubscribe();
   }
 
-  protected save(): void {
-    if (!this.editForm.valid) {
-      return;
-    }
-
-    const value = this.editForm.value;
-
-    this.zoneService.updateRecord(this.edit.value!, RecordType.MX, {
-      name: value.name!,
-      preference: value.preference!,
-      exchange: value.exchange!,
-      ttl: value.ttl!,
-    }).subscribe(() => {
-      this.edit.next(null);
-      this.notificationService.success(`Record \`${value.name}\` was successfully updated.`)
-    });
-  }
-
   delete() {
     const id = this.edit.value!;
     this.records.pipe(
@@ -103,6 +85,24 @@ export class MxComponent  implements OnInit, OnDestroy {
     }).subscribe(() => {
       this.addForm.reset({ttl: 500});
       this.notificationService.success(`Record \`${value.name}\` was successfully created.`);
+    });
+  }
+
+  protected save(): void {
+    if (!this.editForm.valid) {
+      return;
+    }
+
+    const value = this.editForm.value;
+
+    this.zoneService.updateRecord(this.edit.value!, RecordType.MX, {
+      name: value.name!,
+      preference: value.preference!,
+      exchange: value.exchange!,
+      ttl: value.ttl!,
+    }).subscribe(() => {
+      this.edit.next(null);
+      this.notificationService.success(`Record \`${value.name}\` was successfully updated.`)
     });
   }
 }
