@@ -6,6 +6,7 @@ import {IconGearComponent} from "../../core/icons/icon-gear/icon-gear.component"
 import {IconDashboardComponent} from "../../core/icons/icon-dashboard/icon-dashboard.component";
 import {IconListComponent} from "../../core/icons/icon-list/icon-list.component";
 import {ButtonComponent} from "@feel/form";
+import {IconDresdenZoneComponent} from "../../core/icons/icon-dresden-zone/icon-dresden-zone.component";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {ButtonComponent} from "@feel/form";
     IconGearComponent,
     IconDashboardComponent,
     IconListComponent,
-    ButtonComponent
+    ButtonComponent,
+    IconDresdenZoneComponent
   ]
 })
 export class ZoneModule {

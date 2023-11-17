@@ -12,6 +12,7 @@
 
   aside nav {
     gap: calc(0.5 * $s-unit);
+    min-width: 12rem;
   }
 
   main {

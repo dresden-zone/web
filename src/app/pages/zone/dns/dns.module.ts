@@ -25,6 +25,9 @@ import {IconCloseComponent} from "../../../core/icons/icon-close/icon-close.comp
     MxComponent,
     TxtComponent,
   ],
+  exports: [
+    CnameComponent
+  ],
   imports: [
     CommonModule,
     DnsRoutingModule,

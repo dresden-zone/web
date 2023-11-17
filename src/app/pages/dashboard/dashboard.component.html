@@ -1,9 +1,14 @@
-<div class="typography">
-  <h1>DNS Management</h1>
-  <div class="card">
-    <h2>Zones</h2>
-    <ul>
-      <li *ngFor="let zone of zones | async"><a [routerLink]="zone.id">{{zone.name}}</a></li>
-    </ul>
-  </div>
+<div class="hero typography">
+  <div class="glow"></div>
+
+  <app-icon-dresden-zone class="logo"/>
+  <h2 class="slogan">
+    Painless DNS hosting for people in need.
+  </h2>
+</div>
+
+<div class="zones">
+  <feel-button *ngFor="let zone of zones | async" [link]="zone.id">
+    <h3>{{zone.name}}</h3>
+  </feel-button>
 </div>

@@ -1,6 +1,51 @@
 @import "vars";
 
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
   padding: $s-unit;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 2rem;
+
+  .hero {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+    .glow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $c-primary;
+      filter: blur(5rem);
+      border-radius: 50%;
+    }
+
+    .logo {
+      position: relative;
+      width: 20rem;
+    }
+
+    .slogan {
+      position: relative;
+    }
+
+    .logo, .slogan {
+      filter: drop-shadow(0 0 0.5rem $c-secondary);
+    }
+  }
+
+  .zones {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
 }
