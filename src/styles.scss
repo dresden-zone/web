@@ -1,6 +1,10 @@
 @import "theme";
 
 @include theme(
+  $c-secondary: #493804,
+  $c-secondary-l: #2c2102,
+  $c-secondary-ll: #543a00,
+  $c-secondary-d: #151300,
   $c-primary: lighten(#FFC300, 10%),
   $c-primary-l: #FFC300,
   $c-primary-d: #ffb822,

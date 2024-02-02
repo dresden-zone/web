@@ -1,8 +1,7 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import {ZoneComponent} from './zone.component';
+import {Routes} from '@angular/router';
+import {ZoneComponent} from "./zone.component";
 
-const routes: Routes = [{
+export const routes: Routes = [{
   path: '',
   component: ZoneComponent,
   children: [
@@ -13,10 +12,3 @@ const routes: Routes = [{
     {path: 'setup', loadChildren: () => import('./setup/setup.module').then(m => m.SetupModule)}
   ]
 }];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class ZoneRoutingModule {
-}

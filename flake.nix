@@ -22,14 +22,14 @@
         rec {
           checks = packages;
           packages = {
-            dns-web = package;
+            web = package;
             default = package;
           };
         }
       ) // {
       overlays.default = final: prev: {
         inherit (self.packages.${prev.system})
-          dns-web;
+          web;
       };
     };
 }
