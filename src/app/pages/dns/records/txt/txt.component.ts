@@ -2,13 +2,36 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {RecordType} from "../../../../api/zone/zone.domain";
 import {ZoneService} from "../../../../api/zone/zone.service";
 import {BehaviorSubject, filter, map, Subscription, switchMap} from "rxjs";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NotificationService} from "@feel/notification";
+import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
+import {ButtonComponent, TextFieldComponent} from "@feel/form";
+import {IconSaveComponent} from "../../../../core/icons/icon-save/icon-save.component";
+import {IconTrashComponent} from "../../../../core/icons/icon-trash/icon-trash.component";
+import {IconCloseComponent} from "../../../../core/icons/icon-close/icon-close.component";
+import {IconPenComponent} from "../../../../core/icons/icon-pen/icon-pen.component";
+import {IconAddComponent} from "../../../../core/icons/icon-add/icon-add.component";
+import {LoadingComponent} from "../../../../core/loading/loading.component";
 
 @Component({
   selector: 'app-txt',
   templateUrl: './txt.component.html',
-  styleUrls: ['../style.scss']
+  styleUrls: ['../style.scss'],
+  standalone: true,
+  imports: [
+    AsyncPipe,
+    NgIf,
+    NgForOf,
+    ReactiveFormsModule,
+    TextFieldComponent,
+    ButtonComponent,
+    IconSaveComponent,
+    IconTrashComponent,
+    IconCloseComponent,
+    IconPenComponent,
+    IconAddComponent,
+    LoadingComponent
+  ]
 })
 export class TxtComponent implements OnInit, OnDestroy {
 

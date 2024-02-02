@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { IconDresdenZoneComponent } from './icon-dresden-zone.component';
+import {IconDresdenZoneComponent} from './icon-dresden-zone.component';
 
 describe('IconDresdenZoneComponent', () => {
   let component: IconDresdenZoneComponent;
@@ -10,8 +10,8 @@ describe('IconDresdenZoneComponent', () => {
     await TestBed.configureTestingModule({
       imports: [IconDresdenZoneComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(IconDresdenZoneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

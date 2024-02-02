@@ -1,16 +1,16 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {ZoneComponent} from './zone.component';
+import {DnsComponent} from './dns.component';
 
 describe('ZoneComponent', () => {
-  let component: ZoneComponent;
-  let fixture: ComponentFixture<ZoneComponent>;
+  let component: DnsComponent;
+  let fixture: ComponentFixture<DnsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ZoneComponent]
+      imports: [DnsComponent]
     });
-    fixture = TestBed.createComponent(ZoneComponent);
+    fixture = TestBed.createComponent(DnsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

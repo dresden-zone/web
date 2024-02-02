@@ -28,9 +28,9 @@
     </td>
 
     <ng-template #row>
-      <td>{{record.record.name}}</td>
-      <td>{{record.value.target}}</td>
-      <td>{{record.record.ttl}}</td>
+      <td>{{ record.record.name }}</td>
+      <td>{{ record.value.target }}</td>
+      <td>{{ record.record.ttl }}</td>
       <td>
         <feel-button (click)="edit.next(record.record.id)">
           <app-icon-pen/>
@@ -56,5 +56,5 @@
 </table>
 
 <ng-template #loading>
-  Loading...
+  <app-loading></app-loading>
 </ng-template>

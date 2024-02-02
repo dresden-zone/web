@@ -2,28 +2,51 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {RecordType} from "../../../../api/zone/zone.domain";
 import {ZoneService} from "../../../../api/zone/zone.service";
 import {BehaviorSubject, filter, map, Subscription, switchMap} from "rxjs";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {NotificationService} from "@feel/notification";
+import {AsyncPipe, NgForOf, NgIf} from "@angular/common";
+import {ButtonComponent, TextFieldComponent} from "@feel/form";
+import {IconSaveComponent} from "../../../../core/icons/icon-save/icon-save.component";
+import {IconTrashComponent} from "../../../../core/icons/icon-trash/icon-trash.component";
+import {IconCloseComponent} from "../../../../core/icons/icon-close/icon-close.component";
+import {IconPenComponent} from "../../../../core/icons/icon-pen/icon-pen.component";
+import {IconAddComponent} from "../../../../core/icons/icon-add/icon-add.component";
+import {LoadingComponent} from "../../../../core/loading/loading.component";
 
 @Component({
-  selector: 'app-cname',
-  templateUrl: './cname.component.html',
-  styleUrls: ['../style.scss']
+  selector: 'app-aaaa',
+  templateUrl: './aaaa.component.html',
+  styleUrls: ['../style.scss'],
+  standalone: true,
+  imports: [
+    AsyncPipe,
+    NgIf,
+    NgForOf,
+    ReactiveFormsModule,
+    TextFieldComponent,
+    ButtonComponent,
+    IconSaveComponent,
+    IconTrashComponent,
+    IconCloseComponent,
+    IconPenComponent,
+    IconAddComponent,
+    LoadingComponent
+  ]
 })
-export class CnameComponent implements OnInit, OnDestroy {
+export class AaaaComponent implements OnInit, OnDestroy {
 
-  protected readonly records = this.zoneService.getRecords(RecordType.CNAME);
+  protected readonly records = this.zoneService.getRecords(RecordType.AAAA);
 
   protected readonly edit = new BehaviorSubject<string | null>(null);
   protected readonly editForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    target: new FormControl('', [Validators.required]),
+    address: new FormControl('', [Validators.required]),
     ttl: new FormControl(500, [Validators.required]),
   });
 
   protected readonly addForm = new FormGroup({
     name: new FormControl('', [Validators.required]),
-    target: new FormControl('', [Validators.required]),
+    address: new FormControl('', [Validators.required]),
     ttl: new FormControl(500, [Validators.required]),
   });
 
@@ -46,7 +69,7 @@ export class CnameComponent implements OnInit, OnDestroy {
 
           this.editForm.setValue({
             name: record.record.name,
-            target: record.value.target,
+            address: record.value.address,
             ttl: record.record.ttl,
           })
         },
@@ -63,7 +86,7 @@ export class CnameComponent implements OnInit, OnDestroy {
       map(records => records.find(record => record.record.id === id)),
       filter(record => !!record),
       map(record => record!),
-      switchMap(record => this.zoneService.deleteRecord(id, RecordType.CNAME).pipe(map(() => record)))
+      switchMap(record => this.zoneService.deleteRecord(id, RecordType.AAAA).pipe(map(() => record)))
     ).subscribe(record => this.notificationService.success(`Record \`${record.record.name}\` was successfully deleted.`));
   }
 
@@ -74,9 +97,9 @@ export class CnameComponent implements OnInit, OnDestroy {
 
     const value = this.addForm.value;
 
-    this.zoneService.addRecord(RecordType.CNAME, {
+    this.zoneService.addRecord(RecordType.AAAA, {
       name: value.name!,
-      target: value.target!,
+      address: value.address!,
       ttl: value.ttl!,
     }).subscribe(() => {
       this.addForm.reset({ttl: 500});
@@ -91,9 +114,9 @@ export class CnameComponent implements OnInit, OnDestroy {
 
     const value = this.editForm.value;
 
-    this.zoneService.updateRecord(this.edit.value!, RecordType.CNAME, {
+    this.zoneService.updateRecord(this.edit.value!, RecordType.AAAA, {
       name: value.name!,
-      target: value.target!,
+      address: value.address!,
       ttl: value.ttl!,
     }).subscribe(() => {
       this.edit.next(null);

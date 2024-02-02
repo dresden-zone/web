@@ -1,5 +1,5 @@
 import {Component, OnDestroy} from '@angular/core';
-import {ActivatedRoute, RouterOutlet} from "@angular/router";
+import {ActivatedRoute, RouterLink, RouterOutlet} from "@angular/router";
 import {ZoneService} from "../../api/zone/zone.service";
 import {routingAnimation} from "../../animation/routing.animation";
 import {Subscription} from "rxjs";
@@ -11,12 +11,13 @@ import {IconGearComponent} from "../../core/icons/icon-gear/icon-gear.component"
 
 @Component({
   selector: 'app-zone',
-  templateUrl: './zone.component.html',
-  styleUrls: ['./zone.component.scss'],
+  templateUrl: './dns.component.html',
+  styleUrls: ['./dns.component.scss'],
   animations: [routingAnimation],
   standalone: true,
   imports: [
     IconDresdenZoneComponent,
+    RouterLink,
     ButtonComponent,
     IconDashboardComponent,
     IconListComponent,
@@ -24,7 +25,7 @@ import {IconGearComponent} from "../../core/icons/icon-gear/icon-gear.component"
     RouterOutlet
   ]
 })
-export class ZoneComponent implements OnDestroy {
+export class DnsComponent implements OnDestroy {
 
   private readonly subscription: Subscription | undefined;
 

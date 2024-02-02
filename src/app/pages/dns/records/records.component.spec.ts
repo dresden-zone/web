@@ -1,16 +1,16 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {DnsComponent} from './dns.component';
+import {RecordsComponent} from './records.component';
 
 describe('DnsComponent', () => {
-  let component: DnsComponent;
-  let fixture: ComponentFixture<DnsComponent>;
+  let component: RecordsComponent;
+  let fixture: ComponentFixture<RecordsComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [DnsComponent]
+      imports: [RecordsComponent]
     });
-    fixture = TestBed.createComponent(DnsComponent);
+    fixture = TestBed.createComponent(RecordsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

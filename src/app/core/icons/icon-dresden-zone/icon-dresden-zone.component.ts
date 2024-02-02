@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-icon-dresden-zone',
   standalone: true,
-  imports: [CommonModule],
   templateUrl: './icon-dresden-zone.component.svg',
   styleUrl: './icon-dresden-zone.component.scss'
 })

@@ -8,7 +8,7 @@ describe('SetupComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SetupComponent]
+      imports: [SetupComponent]
     });
     fixture = TestBed.createComponent(SetupComponent);
     component = fixture.componentInstance;

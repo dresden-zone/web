@@ -2,7 +2,7 @@
   <thead>
   <tr>
     <th>Name</th>
-    <th>Address</th>
+    <th>Content</th>
     <th>TLL</th>
   </tr>
   </thead>
@@ -11,7 +11,7 @@
     <td *ngIf="(edit | async) === record.record.id; else row" colspan="4">
       <form [formGroup]="editForm">
         <feel-text-field formControlName="name" label="Name"/>
-        <feel-text-field formControlName="address" label="Address"/>
+        <feel-text-field formControlName="content" label="Content"/>
         <feel-text-field formControlName="ttl" label="TTL" type="number"/>
         <div class="actions">
           <feel-button (click)="save()" [disabled]="!editForm.valid" flavor="good">
@@ -28,9 +28,9 @@
     </td>
 
     <ng-template #row>
-      <td>{{record.record.name}}</td>
-      <td>{{record.value.address}}</td>
-      <td>{{record.record.ttl}}</td>
+      <td>{{ record.record.name }}</td>
+      <td>{{ record.value.content }}</td>
+      <td>{{ record.record.ttl }}</td>
       <td>
         <feel-button (click)="edit.next(record.record.id)">
           <app-icon-pen/>
@@ -42,7 +42,7 @@
     <td colspan="4">
       <form [formGroup]="addForm">
         <feel-text-field formControlName="name" label="Name"/>
-        <feel-text-field formControlName="address" label="Address"/>
+        <feel-text-field formControlName="content" label="Content"/>
         <feel-text-field formControlName="ttl" label="TTL" type="number"/>
         <div class="actions">
           <feel-button (click)="add()" [disabled]="!addForm.valid" flavor="good">
@@ -56,5 +56,5 @@
 </table>
 
 <ng-template #loading>
-  Loading...
+  <app-loading></app-loading>
 </ng-template>
